@@ -1,11 +1,24 @@
-import Arrow from "../assets/svg/Arrow";
+import { useEffect } from "react";
+
 import ClipPath from "../assets/svg/ClipPath";
 import { benefits } from "../constants";
 import { GradientLight } from "./design/Benefits";
 import Heading from "./Heading";
 import Section from "./Section";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 const Benefits = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-out-cubic",
+      once: false,
+      mirror: true,
+    });
+  }, []);
+  const { t } = useTranslation();
   return (
     <Section id="features" className="">
       <div className="container relative z-2">
@@ -13,32 +26,33 @@ const Benefits = () => {
           className="md:max-w-md lg:max-w-2xl"
           title={
             <>
-              Converse melhor, venda mais rápido com{" "}
+              {t("benefits.heading")}{" "}
               <span className="inline-block relative font-semibold">
-                a T3A.
+                {t("benefits.companyName")}.
               </span>
             </>
           }
         />
 
         <div className="flex flex-wrap gap-10 mb-10">
-          {benefits.map((benefit) => (
+          {benefits.map((benefit, index) => (
             <div
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
               style={{
                 backgroundImage: `url(${benefit.backgroundUrl})`,
               }}
               key={benefit.id}
+              data-aos="flip-left"
+              data-aos-delay={index * 150} // delay progressivo: 0ms, 150ms, 300ms, etc
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
-                <h5 className="h5 mb-5">{benefit.title}</h5>
-                <p className="body-2 mb-6 text-n-3">{benefit.text}</p>
-                <div className="flex items-center mt-auto">
-                  {/* <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
-                    Explore more
-                  </p>
-                  <Arrow /> */}
-                </div>
+                <h5 className="h5 mb-5">
+                  {t(`benefits.items.${index}.title`)}
+                </h5>
+                <p className="body-2 mb-6 text-n-3">
+                  {t(`benefits.items.${index}.text`)}
+                </p>
+                <div className="flex items-center mt-auto"></div>
               </div>
 
               {benefit.light && <GradientLight />}

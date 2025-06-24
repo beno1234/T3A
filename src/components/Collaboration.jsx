@@ -5,10 +5,20 @@ import { useEffect, useRef } from "react";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
 import Section from "./Section";
 import gsap from "gsap";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 const Collaboration = () => {
   const circleRef = useRef(null);
   const titleRef = useRef(null);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+    });
+  }, []);
   useEffect(() => {
     // Animação do círculo girando
     gsap.to(circleRef.current, {
@@ -57,16 +67,18 @@ const Collaboration = () => {
       });
     });
   }, []);
+  const { t } = useTranslation();
+
   return (
     <Section crosses className="">
       <div className="container lg:flex">
-        <div className="max-w-[25rem]">
+        <div className="max-w-[25rem]" data-aos="fade-up">
           <h2 className="h2 mb-4 md:mb-8">
-            <span ref={titleRef}>Secretária Humanizada</span>
+            <span ref={titleRef}>{t("collaboration.title")}</span>
           </h2>
 
           <ul className="max-w-[22rem] mb-10 md:mb-14">
-            {collabContent.map((item) => (
+            {collabContent.map((item, i) => (
               <li className="mb-3 py-3" key={item.id}>
                 <div className="flex items-center">
                   <img
@@ -80,7 +92,7 @@ const Collaboration = () => {
                     className="body-2 ml-5 animate-title-letter"
                     data-title={item.title}
                   >
-                    {item.title}
+                    {t(`collaboration.items.${i}.title`)}
                   </h6>
                 </div>
 
@@ -91,20 +103,21 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button>Adquirir liçenca da IA </Button>
+          <Button>{t("collaboration.button")} </Button>
         </div>
 
-        <div className="lg:ml-auto xl:w-[38rem] mt-4">
+        <div className="lg:ml-auto xl:w-[38rem] mt-4" data-aos="fade-up">
           <p
             className="body-2 mb-4 text-white md:mb-16 lg:mb-32 lg:w-[32rem] lg:mx-auto"
             ref={titleRef}
           >
-            {collabText}
+            {t("collaboration.description")}
           </p>
 
           <div
             className="relative left-1/2 flex w-[22rem] aspect-square border border-white rounded-full -translate-x-1/2 scale-75 md:scale-100"
             ref={circleRef}
+            data-aos="fade-up"
           >
             <div className="flex w-60 aspect-square m-auto border border-white rounded-full">
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">

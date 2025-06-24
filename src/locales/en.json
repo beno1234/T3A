@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "title": "Automate your sales",
+    "subtitle": "We are T3A — a movement for SMBs seeking freedom, scale and autopilot sales with artificial intelligence."
+  },
+  "button": {
+    "cta": "Contact us"
+  },
+  "typewriter": [
+    "AI on WhatsApp.",
+    "Qualified leads.",
+    "Save time.",
+    "Focus on management.",
+    "Grow with freedom."
+  ],
+  "CompanyLogos": {
+    "title": "Some Companies Trust in T3A"
+  },
+  "benefits": {
+    "heading": "Chat better, sell faster with",
+    "companyName": "T3A",
+    "items": [
+      {
+        "title": "Human-like.",
+        "text": "Trinity responds like a human professional — empathetic and intuitive — delivering an amazing customer experience."
+      },
+      {
+        "title": "Handles multitasking.",
+        "text": "On your WhatsApp Business, the AI is ready to boost performance and respond to hundreds of clients at the same time."
+      },
+      {
+        "title": "Scalable.",
+        "text": "Better than your best human assistant, enabling scalable service and sales."
+      }
+    ]
+  },
+
+  "collaboration": {
+    "title": "Human-like Assistant",
+    "button": "Get AI License",
+    "description": "Our technology transforms your WhatsApp into an automated sales machine that qualifies leads, schedules meetings, and closes deals 24/7. You focus on strategic management and gain time.",
+    "items": [
+      { "title": "Human-like Assistant" },
+      { "title": "SDR Representative" },
+      { "title": "Sales Closer" },
+      { "title": "Full Customization" }
+    ]
+  },
+
+  "services": {
+    "title": "The Minds Behind the Technology",
+    "joao": {
+      "name": "João Victor Trindade",
+      "role": "Co-Founder and Developer at T3A.",
+      "description": "Combines his innovative mindset and broad creativity to develop AI solutions that will improve the lives of thousands of Brazilians over the next 10 years."
+    },
+    "fernando": {
+      "name": "Fernando Gusmão",
+      "role": "Co-Founder and CFO at T3A.",
+      "description": "His expertise in management and leadership is one of the pillars that supports the growth of the Movement, ensuring that T3A's solutions are scalable and deliver lasting value to our clients."
+    }
+  }
+}

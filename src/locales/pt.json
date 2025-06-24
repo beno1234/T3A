@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "title": "Automatize suas vendas",
+    "subtitle": "Somos a T3A — um movimento para PMEs que buscam liberdade, escala e vendas no piloto automático com inteligência artificial."
+  },
+  "button": {
+    "cta": "Entre em contato conosco"
+  },
+  "typewriter": [
+    "IA no WhatsApp.",
+    "Leads qualificados.",
+    "Ganhe tempo.",
+    "Foque na gestão.",
+    "Cresça com liberdade."
+  ],
+  "CompanyLogos": {
+    "title": "Algumas Empresas confiam na T3A"
+  },
+  "benefits": {
+    "heading": "Converse melhor, venda mais rápido com",
+    "companyName": "a T3A",
+    "items": [
+      {
+        "title": "Humanizada.",
+        "text": "A Trinity responde como um profissional humano, com empatia e intuitividade, tornando a experiência do cliente incrível."
+      },
+      {
+        "title": "Gerencia multitarefas.",
+        "text": "No seu WhatsApp Business, a IA estará pronta para gerar performance, e responder centenas de clientes ao mesmo tempo."
+      },
+      {
+        "title": "Escalável.",
+        "text": "Melhor que o seu melhor atendente humano, proporciona escalabilidade no atendimento e vendas."
+      }
+    ]
+  },
+
+  "collaboration": {
+    "title": "Secretária Humanizada",
+    "button": "Adquirir licença da IA",
+    "description": "A nossa Tecnologia transforma o seu WhatsApp em uma máquina de vendas automática que qualifica leads, agenda reuniões e fecha negócios 24 horas por dia. Você foca na gestão estratégica e ganha tempo",
+    "items": [
+      { "title": "Secretária Humanizada" },
+      { "title": "Atendente SDR" },
+      { "title": "Vendedora / Closer" },
+      { "title": "Customização Completa" }
+    ]
+  },
+  "services": {
+    "title": "As Mentes por Trás da Tecnologia",
+    "joao": {
+      "name": "João Victor Trindade",
+      "role": "Co-Fundador e desenvolvedor da T3A.",
+      "description": "Une a sua mentalidade inovadora e ampla criatividade para desenvolver soluções por IA que beneficiarão a vida de milhares de brasileiros nos próximos 10 anos."
+    },
+    "fernando": {
+      "name": "Fernando Gusmão",
+      "role": "é Co-Fundador e CFO da T3A.",
+      "description": "Sua expertise em gestão e liderança é um dos pilares que sustenta o crescimento do Movimento, garantindo que as entregas da T3A sejam escaláveis e ofereçam valor duradouro aos nossos clientes."
+    }
+  }
+}

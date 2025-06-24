@@ -51,13 +51,13 @@ const Header = () => {
           Source Code
         </Button> */}
 
-        <Button
+        {/* <Button
           onClick={toggleNavigation}
           className="ml-auto lg:hidden"
           px="px-3"
         >
           <MenuSvg openNavigation={openNavigation} />
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

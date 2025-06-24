@@ -15,6 +15,7 @@ import {
   VideoBar,
   VideoChatMessage,
 } from "./design/Services";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 const Services = () => {
@@ -48,21 +49,26 @@ const Services = () => {
       );
     });
   }, []);
-
+  const { t, i18n } = useTranslation();
+  const [keyJoao, setKeyJoao] = useState(0);
+  const [keyFernando, setKeyFernando] = useState(0);
+  useEffect(() => {
+    setKeyJoao((prev) => prev + 1);
+    setKeyFernando((prev) => prev + 1);
+  }, [i18n.language]);
   return (
     <Section id="how-to-use">
       <div className="container perspective-1000">
-        <Heading title={<>As Mentes por Trás da Tecnologia </>} />
+        <Heading title={t("services.title")} />
 
         <div className="relative">
-          {/* Service 1 */}
           <div
-            className="founder-card relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
+            className="founder-card relative z-1 flex flex-col md:flex-row h-auto md:h-[39rem] mb-10 p-6 md:p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
             ref={joaoRef}
           >
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none select-none md:w-3/5 xl:w-auto">
+            <div className="relative w-full h-[22rem] md:w-3/5 md:h-auto md:absolute md:top-0 md:left-0 pointer-events-none select-none mb-6 md:mb-0">
               <img
-                className="w-full h-full object-cover md:object-right"
+                className="w-full h-full object-cover md:object-right rounded-2xl md:rounded-none"
                 width={800}
                 height={730}
                 alt="Smartest AI"
@@ -70,36 +76,32 @@ const Services = () => {
               />
             </div>
 
-            <div className="relative z-1 max-w-[32rem] ml-auto">
-              <h4 className="h4 mb-4">João Victor Trindade </h4>
-              <p className="body-2 mb-[3rem] text-n-3">
-                Co-Fundador e desenvolvedor da T3A.
-              </p>
-              <p className="body-2 mb-[3rem] text-n-3">
+            <div className="relative z-1 w-full lg:max-w-[92rem] lg:mr-auto lg:pl-[calc(60%)]">
+              <h4 className="h4 mb-4 text-white ">
+                {t("services.joao.name")}{" "}
+              </h4>
+              <p className="body-2 mb-6 text-n-3">{t("services.joao.role")}</p>
+              <p className="body-2 text-n-3">
                 <Typewriter
+                  key={keyJoao}
                   onInit={(typewriter) => {
                     typewriter
-                      .typeString(
-                        "Une a sua mentalidade inovadora e ampla criatividade para desenvolver soluções por IA que beneficiarão a vida de milhares de brasileiros nos próximos 10 anos."
-                      )
+                      .typeString(t("services.joao.description"))
                       .start();
                   }}
-                  options={{
-                    autoStart: true,
-                    loop: false,
-                  }}
+                  options={{ autoStart: true, loop: false }}
                 />
               </p>
             </div>
           </div>
 
           <div
-            className="founder-card relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
+            className="founder-card relative z-1 flex flex-col md:flex-row h-auto md:h-[39rem] mb-10 p-6 md:p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
             ref={fernandoRef}
           >
-            <div className="absolute top-0 right-0 w-full h-full pointer-events-none select-none md:w-3/5 xl:w-auto">
+            <div className="relative w-full h-[22rem] md:w-3/5 md:h-auto mb-6 md:mb-0 md:absolute md:top-0 md:right-0 pointer-events-none select-none">
               <img
-                className="w-full h-full object-cover md:object-right"
+                className="w-full h-full object-cover md:object-right rounded-2xl md:rounded-none"
                 width={800}
                 height={730}
                 alt="Smartest AI"
@@ -107,30 +109,24 @@ const Services = () => {
               />
             </div>
 
-            <div className="relative z-1 max-w-[32rem] mr-auto">
-              <h4 className="h4 mb-4">Fernando Gusmão </h4>
-              <p className="body-2 mb-[3rem] text-n-3">
-                é Co-Fundador e CFO da T3A.
+            <div className="relative z-1 w-full md:max-w-[92rem] md:mr-auto md:pr-[calc(60%)]">
+              <h4 className="h4 mb-4">{t("services.fernando.name")} </h4>
+              <p className="body-2 mb-6 text-n-3">
+                {t("services.fernando.role")}
               </p>
-              <p className="body-2 mb-[3rem] text-n-3">
+              <p className="body-2  text-n-3">
                 <Typewriter
+                  key={keyFernando}
                   onInit={(typewriter) => {
                     typewriter
-                      .typeString(
-                        "Sua expertise em gestão e liderança é um dos pilares que sustenta o crescimento do Movimento, garantindo que as entregas da T3A sejam escaláveis e ofereçam valor duradouro aos nossos clientes."
-                      )
+                      .typeString(t("services.fernando.description"))
                       .start();
                   }}
-                  options={{
-                    autoStart: true,
-                    loop: false,
-                  }}
+                  options={{ autoStart: true, loop: false }}
                 />
               </p>
             </div>
           </div>
-
-          {/* Service 2 & 3 */}
 
           <Gradient />
         </div>
