@@ -111,3 +111,16 @@
 .rotate-infinite {
   animation: rotateInfinite 60s linear infinite;
 }
+
+@keyframes loader-bar-smooth {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-loader-bar-smooth {
+  animation: loader-bar-smooth 1.2s infinite linear;
+}
