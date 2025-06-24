@@ -108,14 +108,14 @@ const Collaboration = () => {
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4" data-aos="fade-up">
           <p
-            className="body-2 mb-4 text-white md:mb-16 lg:mb-32 lg:w-[32rem] lg:mx-auto"
+            className="body-2 mb-20 text-white md:mb-16 lg:mb-32 lg:w-[32rem] lg:mx-auto"
             ref={titleRef}
           >
             {t("collaboration.description")}
           </p>
 
           <div
-            className="relative left-1/2 flex w-[22rem] aspect-square border border-white rounded-full -translate-x-1/2 scale-75 md:scale-100"
+            className="relative left-1/2 flex w-[19rem] lg:w-[22rem] aspect-square border border-white rounded-full -translate-x-1/2 scale-75 md:scale-100"
             ref={circleRef}
             data-aos="fade-up"
           >
